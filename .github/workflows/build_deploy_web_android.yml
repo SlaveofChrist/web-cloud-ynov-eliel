@@ -1,1 +1,22 @@
 name: build and deploy Web & Android
+on: 
+    push: 
+        branches : [main]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [22.x,23.x,24.x]
+        steps:
+            - name: Setup repo
+              uses: actions/checkout@v3
+            - name : Use Node.js ${{matrix.node-version}}
+              uses: actions/setup-node@v3
+              with: 
+                node-version: ${{matrix.node-version}}
+            - name: Install dependencies
+              run: npm install
+            - name: Build web app
+              run : npm predeploy    
+
