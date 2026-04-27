@@ -19,7 +19,8 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.eli712.webcloudynov"
     },
     "web": {
       "output": "static",
@@ -44,6 +45,12 @@
       "typedRoutes": true,
       "reactCompiler": true,
       "baseUrl": "/web-cloud-ynov-eliel"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "4e885dbc-ca5e-4aee-b1db-38a56282e0eb"
+      }
     }
   }
 }
